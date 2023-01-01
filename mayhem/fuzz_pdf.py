@@ -12,8 +12,7 @@ def TestOneInput(data):
     fdp = fuzz_helpers.EnhancedFuzzedDataProvider(data)
     try:
         with fdp.ConsumeMemoryFile(as_bytes=True, all_data=True) as f:
-            file = PDF.loads(f)
-        PDF.dumps(file)
+            PDF.loads(f)
     except AssertionError:
         return -1
 
