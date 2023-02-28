@@ -1,0 +1,9 @@
+project: borb
+target: fuzz-pdf
+testsuite:
+    - file://mayhem/testsuite
+
+cmds:
+  - cmd: /src/mayhem/fuzz_pdf.py
+    libfuzzer: true
+    timeout: 12
